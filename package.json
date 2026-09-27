@@ -11,8 +11,13 @@
     "dev": "nodemon index.js "
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.3.0",
+    "cloudinary": "^2.11.0",
     "dotenv": "^18.0.3",
     "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "mongoose": "^9.10.2",
     "nodemon": "^3.1.14"
   }
 }
