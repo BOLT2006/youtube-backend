@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   password: {
-    type: true,
+    type: String,
     required: true,
   },
   logoUrl: {
@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
       ref: "User",
     },
   ],
-});
+} , {timestamps : true});
 
 const userModel = mongoose.model("User", userSchema);
 

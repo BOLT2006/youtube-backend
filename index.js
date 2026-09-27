@@ -7,14 +7,17 @@ import userRoutes from "./routes/user.route.js"
 import { connectDB } from "./database/db.js"
 const app = express();
 
-app.use("/api/v1/user/",userRoutes)
 
-
+/* Middleware First */
 app.use(bodyParser.json())
 app.use(fileUpload({
     useTempFiles : true,
     tempFileDir : "/temp/"
 }))
+
+/* Routes */
+app.use("/api/v1/user/",userRoutes)
+
 
 
 app.listen(process.env.PORT , () =>{
