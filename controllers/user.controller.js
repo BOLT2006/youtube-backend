@@ -68,7 +68,7 @@ const userLogin = async (req, res) => {
         channelName : existingUser.channelName,
         phone : existingUser.phone,
         logoId : existingUser.logoId,
-    } , process.env.JWT_SECRET , {expiresIn : "1h"})
+    } , process.env.JWT_SECRET , {expiresIn : "12h"})
 
     return res.status(200).json({
         success : true,
